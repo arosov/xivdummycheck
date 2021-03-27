@@ -1,0 +1,13 @@
+{% include "header.html" %}
+<body>
+{%  block content %}
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.report_id.label }} {{ form.report_id(size=32) }}
+    </p>
+<p>{{ form.submit() }}</p>
+</form>
+{%  endblock %}
+</body>
+</html>
